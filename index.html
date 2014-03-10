@@ -18,35 +18,13 @@
 		</style>
 		<section class="calculator" ng-controller="MainCtrl">
 			<table>
-				<tr>
-					<td class="thumb"><img src="images/water-bottle.jpg"></td>
-					<td>Water</td>
-					<td><input type="number"></td>
-					<td>20 บาท</td>
-				</tr>
-				<tr>
-					<td class="thumb"><img src="images/mcdonalds-ff.jpg"></td>
-					<td>FF</td>
-					<td><input type="number"></td>
-					<td>58 บาท</td>
-				</tr>
-				<tr>
-					<td class="thumb"><img src="images/sandwich.jpg"></td>
-					<td>Sandwich</td>
-					<td><input type="number"></td>
-					<td>40 บาท</td>
-				</tr>
-				<tr>
-					<td class="thumb"><img src="images/snacks.gif"></td>
-					<td>Snack</td>
-					<td><input type="number"></td>
-					<td>25 บาท</td>
-				</tr>
-				<tr>
-					<td class="thumb"><img src="images/burger.gif"></td>
-					<td>Burger</td>
-					<td><input type="number"></td>
-					<td>70 บาท</td>
+				<tr ng-repeat="item in products">
+					<td class="thumb"><img ng-src="images/{{item.picture}}"></td>
+					<td>{{item.name}}</td>
+					<td><input type="number" 
+						ng-model="item.count"
+						></td>
+					<td>{{item.price * item.count}} บาท</td>
 				</tr>
 				<tr>
 					<td>รวม</td>
