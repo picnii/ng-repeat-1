@@ -22,6 +22,7 @@
 					<td class="thumb"><img ng-src="images/{{item.picture}}"></td>
 					<td>{{item.name}}</td>
 					<td><input type="number" 
+						ng-change="updatePrice()"
 						ng-model="item.count"
 						></td>
 					<td>{{item.price * item.count}} บาท</td>
@@ -30,7 +31,7 @@
 					<td>รวม</td>
 					<td></td>
 					<td></td>
-					<td>200 บาท</td>
+					<td>{{sum}} บาท</td>
 				</tr>
 			</table>
 		</section>

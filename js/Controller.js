@@ -18,5 +18,15 @@ function MainCtrl($scope)
 
 	]
 
+	$scope.updatePrice = function()
+	{
+		$scope.sum = 0;
+		for(var i=0; i < $scope.products.length; i++)
+		{
+			$scope.sum += $scope.products[i].price * $scope.products[i].count
+		}
+	}
+
+	$scope.updatePrice();
 	//tinyurl.com/tsrdoc
 }
