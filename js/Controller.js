@@ -9,5 +9,8 @@ function MainCtrl($scope)
 
 	]
 
+	for(var i =0; i < $scope.products.length ;i++)
+		$scope.sum += $scope.products[i].price;
+
 	//tinyurl.com/tsrdoc
 }
