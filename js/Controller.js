@@ -18,6 +18,18 @@ function MainCtrl($scope)
 
 	]
 
+	$scope.plusOne = function(item)
+	{
+		item.count = item.count + 1;
+		$scope.updatePrice();
+	}
+
+	$scope.minusOne = function(item)
+	{
+		item.count = item.count - 1;
+		$scope.updatePrice();
+	}
+
 	$scope.updatePrice = function()
 	{
 		$scope.sum = 0;
