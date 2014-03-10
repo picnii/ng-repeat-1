@@ -13,13 +13,16 @@
 		<section class="calculator" ng-controller="MainCtrl">
 			<h2>Products</h2>
 			<table class="table">
-				<tr ng-repeat="product in products">
-					<td>{{product.name}}</td>
-					<td>{{product.price}}</td>
-
+		<tr ng-repeat="item in products">
+					<td>{{item.name}}</td>
+					<td>{{item.quantity}}</td>
+					<td>{{item.price}} บาท/ชิ้น</td>
+					<td>{{item.quantity * item.price}} บาท</td>
 				</tr>
 				<tr class="summary">
 					<td>รวม</td>
+					<td></td>
+					<td></td>
 					<td>{{sum}} บาท</td>
 				</tr>
 			</table>
