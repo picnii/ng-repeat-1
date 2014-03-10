@@ -10,29 +10,17 @@
 	</head>
 	<body>
 		
-		<section class="calculator">
+		<section class="calculator" ng-controller="MainCtrl">
 			<h2>Products</h2>
 			<table class="table">
-				<tr>
-					<td>ส้มตำ</td>
-					<td>50 บาท</td>
+				<tr ng-repeat="product in products">
+					<td>{{product.name}}</td>
+					<td>{{product.price}}</td>
 
-				</tr>
-				<tr>
-					<td>ไก่ย่าง</td>
-					<td>20 บาท</td>
-				</tr>
-				<tr>
-					<td>น้ำตก</td>
-					<td>50 บาท</td>
-				</tr>
-				<tr>
-					<td>ซุปหน่อไม้</td>
-					<td>50 บาท</td>
 				</tr>
 				<tr class="summary">
 					<td>รวม</td>
-					<td>170 บาท</td>
+					<td>{{sum}} บาท</td>
 				</tr>
 			</table>
 			
